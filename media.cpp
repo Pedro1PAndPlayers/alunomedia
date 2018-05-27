@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     int n1,n2,n3,nr,nq ;
-    double m , mr = 0 ;
+    float m , mr = 0 ;
     
     cout<<"Bem vindo ao programa que ira calcular a media de um aluno" << endl;
     cout<<"Digite a primeira nota do aluno" << endl;
@@ -18,10 +18,11 @@ int main() {
     m = (n1+n2+n3+nq)/4;
     cout<<"A media do aluno é "<< m << endl;
     
-    if ((m < 0) && (m>10)) {
+    if ((m < 0) || (m>10)) {
         cout<<"Você digitou valores invalidos que deram a media menor que 0 ou maior que 10" << endl ;
         cout<<"Obrigado por usar o programa" ;
-    }
+        return 0;
+    };
     if ((m >=6) && (m <=10)) {
         cout<<"Aprovado com sucesso" << endl;
         cout<<"Obrigado por usar o programa";
